@@ -1,0 +1,211 @@
+/**
+ * jcarousel
+ */
+
+.jcarousel-wrapper {
+	border-top: @padding solid @pink-dark-1;
+	border-bottom: 30px solid @pink-dark-1;
+	box-shadow: 0 0 0 4px @pink, 0 0 0 6px @pink-dark-1;
+	height: 425px;
+	margin: @padding auto 0;
+	position: relative;
+	width: 100%;
+}
+
+.jcarousel {
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 20000em;
+}
+
+.carousel-item {
+	float: left;
+}
+
+.carousel-item__wrap {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	height: 425px;
+}
+
+.carousel-item__wrap-1 {
+	background-image: url("../../media/img/slider/slide-1.jpg");
+}
+
+.carousel-item__wrap-2 {
+	background-image: url("../../media/img/slider/slide-2.jpg");
+}
+
+.carousel-item__wrap-3 {
+	background-image: url("../../media/img/slider/slide-3.jpg");
+}
+
+.carousel-item__wrap-4 {
+	background-image: url("../../media/img/slider/slide-4.jpg");
+}
+
+.carousel-item__wrap-5 {
+	background-image: url("../../media/img/slider/slide-5.jpg");
+}
+
+.carousel-item__title {
+	font-size: 34px;
+	padding: 30px 0 @padding;
+	font-weight: bold;
+}
+
+.carousel-item__title-pink {
+	color: @pink-dark-2;
+}
+
+.carousel-item__title-blue {
+	color: @blue-dark-2;
+}
+
+.carousel-item__title-yellow {
+	color: @yellow-light-1;
+}
+
+.carousel-item__title-green {
+	color: @green-light-1;
+}
+
+.carousel-item__description {
+	border-radius: 5px;
+	float: left;
+	padding: @padding;
+	position: relative;
+	width: 45%;
+
+	&:after {
+		bottom: 0;
+		border-radius: 5px;
+		content: '';
+		display: block;
+		left: 0;
+		opacity: .9;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
+}
+
+.carousel-item__description-yellow {
+	color: @pink-dark-2;
+
+	&:after {
+		background: @yellow-light-1;
+	}
+}
+
+.carousel-item__description-pink {
+	color: @blue-dark-2;
+
+	&:after {
+		background: @pink-light-1;
+	}
+}
+
+.carousel-item__description-green {
+	color: @yellow-light-2;
+
+	&:after {
+		background: @green-light-1;
+	}
+}
+
+.carousel-item__description-blue {
+	color: @green-light-2;
+
+	&:after {
+		background: @blue-light-1;
+	}
+}
+
+.carousel-item__description__text {
+	font-size: 20px;
+	position: relative;
+	z-index: 3;
+
+	p {
+		margin: 0 0 10px;
+	}
+}
+
+/** Carousel Controls **/
+.jcarousel-control {
+	background: url("../../media/img/sprite.png?v1") no-repeat -916px -519px;
+	display: block;
+	height: 81px;
+	opacity: .5;
+	overflow: hidden;
+	position: absolute;
+	text-decoration: none;
+	text-indent: 100px;
+	top: 172px;
+	width: 55px;
+}
+
+.jcarousel-control-prev {
+	left: 0;
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.jcarousel-control-next {
+	right: 0;
+}
+
+.jcarousel-control:hover {
+	opacity: .9;
+}
+
+.jcarousel-control.inactive {
+	cursor: default;
+}
+
+/** Carousel Pagination **/
+.carousel-pagination__wrap {
+	position: absolute;
+	width: 100%;
+	margin-top: -60px;
+}
+
+.jcarousel-pagination {
+	display: inline;
+}
+
+.jcarousel-pagination a {
+	background: @pink;
+	border-radius: 30px;
+	display: inline-block;
+	height: 11px;
+	margin: 0 7px;
+	overflow: hidden;
+	text-indent: 100px;
+	width: 11px;
+	box-shadow: 0 0 6px #544c3b;
+}
+
+.jcarousel-pagination a:hover {
+	background: @pink-light-2;
+}
+
+.jcarousel-pagination a.active {
+	background: @pink-dark-2;
+	cursor: default;
+}

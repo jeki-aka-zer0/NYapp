@@ -1,0 +1,337 @@
+/**
+ * about page
+ */
+
+.page-about {
+	background: @blue;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;
+
+	.logo {
+		color: @blue-light-2;
+
+		&:hover, &:focus, &:active {
+			color: @blue-light-1;
+		}
+	}
+
+	.logo__ny {
+		text-shadow: 2px 2px 0 @blue, 4px 4px 0 @blue-dark-1;
+	}
+
+	.menu__item__link {
+		border: 2px solid @blue-light-1;
+		color: @blue-light-1;
+
+		&:hover {
+			background: @blue-light-2;
+			border-color: @blue-light-2;
+			color: @blue-dark-1;
+		}
+	}
+
+	.menu__item__link-active, .menu__item__link-active:hover {
+		background: @blue-dark-1;
+		border-color: @blue-dark-1;
+		color: @blue-light-1;
+	}
+
+	.hvr-outline-out:hover:before {
+		border: 2px solid @blue-light-2;
+	}
+
+	h2, h3 {
+		color: @blue-light-2;
+	}
+
+	.content {
+		&:after {
+			.clearAfter();
+		}
+	}
+
+	.social__btn {
+		position: relative;
+		bottom: -30px;
+	}
+}
+
+.stitch-head {
+	border: 2px dashed #06aeae;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 3px @padding 9px;
+}
+
+@steps-min-width: 640px;
+
+.steps {
+	background: url("../../media/img/sprite.png?v1") no-repeat 40px 0;
+	color: @blue-light-2;
+	font-size: 18px;
+	padding-bottom: @padding;
+
+	@media (max-width: @steps-min-width) {
+		width: 100%;
+	}
+
+	@media (min-width: @steps-min-width) {
+		width: 600px;
+	}
+
+	@media (min-width: 900px) {
+		float: right;
+	}
+
+	@media (max-width: 900px) {
+		margin: 0 auto;
+	}
+}
+
+.step {
+	position: relative;
+	min-height: 40px;
+
+	&:hover .step__text {
+		color: @blue-light-3;
+	}
+}
+
+.step-int() {
+	background: @blue-light-2;
+	border-radius: 9999px;
+	border: 2px solid @blue;
+	box-shadow: 0 0 0 6px @blue-light-2;
+	color: @blue;
+	display: inline-block;
+	font: 60px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	line-height: 1;
+	padding-bottom: 4px;
+	position: absolute;
+	text-align: center;
+	width: 65px;
+
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+	transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.step-1, .step-3, .step-5 {
+	padding: 0 0 0 100px;
+
+	&:before {
+		top: 6px;
+		left: 6px;
+		.step-int();
+	}
+}
+
+.step-3, .step-5 {
+	padding-top: 40px;
+}
+
+.step-2, .step-4 {
+	padding: 40px 100px 0 0;
+	text-align: right;
+
+	&:after {
+		top: 6px;
+		right: 6px;
+		.step-int();
+	}
+}
+
+.js {
+	.step-1, .step-3, .step-5 {
+		&.not-initialized {
+			&:before {
+				font-size: 4px;
+				left: 40px;
+				top: 40px;
+				width: 8px;
+			}
+		}
+	}
+
+	.step-1 {
+		&.not-initialized {
+			&:before {
+				top: 60px;
+			}
+		}
+	}
+
+	.step-2, .step-4 {
+		&.not-initialized {
+			&:after {
+				font-size: 4px;
+				top: 40px;
+				right: 40px;
+				width: 8px;
+			}
+		}
+	}
+
+	.phone__placemark {
+		display: none;
+	}
+}
+
+.step-1 {
+	&:before {
+		content: '1';
+		top: 30px;
+	}
+}
+
+.step-2 {
+	margin: 95px 0 0 0;
+
+	.desktop({ margin-right: 130px; });
+
+	@media (min-width: @steps-min-width) {
+		margin-right: 130px;
+	}
+
+	&:after {
+		content: '2';
+	}
+}
+
+.step-3 {
+	margin: 50px 0 0 80px;
+
+	&:before {
+		content: '3';
+	}
+}
+
+.step-4 {
+	margin-top: 60px;
+
+	&:after {
+		content: '4';
+	}
+}
+
+.step-5 {
+	margin-top: 60px;
+
+	&:before {
+		content: '5';
+	}
+}
+
+.step__text {
+	position: relative;
+	top: -12px;
+}
+
+.phone {
+	background: url("../../media/img/sprite.png?v1") no-repeat -588px -5px;
+	height: 653px;
+	position: absolute;
+	top: 200px;
+	width: 320px;
+	z-index: 1;
+
+	@media (min-width: 1100px) {
+		left: 10%;
+	}
+	@media (max-width: 1100px) {
+		right: 640px;
+	}
+	@media (max-width: 900px) {
+		display: none;
+	}
+}
+
+.phone__map {
+	background: url("../../media/img/map.jpg?v1") no-repeat;
+	border: 2px inset gray;
+	cursor: move;
+	height: 493px;
+	left: 18px;
+	position: absolute;
+	top: 80px;
+	width: 275px;
+	z-index: 2;
+}
+
+.phone__placemark {
+	background: url("../../media/img/sprite.png?v1") no-repeat -547px -698px;
+	height: 39px;
+	left: 163px;
+	position: absolute;
+	top: 306px;
+	width: 28px;
+	z-index: 3;
+}
+
+.phone__top {
+	background: #f76c6c url("../../media/img/sprite.png?v1") no-repeat -580px -661px;
+	height: 57px;
+	left: 20px;
+	position: absolute;
+	top: 81px;
+	width: 275px;
+	z-index: 4;
+}
+
+.phone_button {
+	border-radius: 9999px;
+	cursor: pointer;
+	height: 45px;
+	left: 136px;
+	position: absolute;
+	top: 586px;
+	width: 45px;
+	z-index: 5;
+
+	&:hover {
+		background: #141414;
+	}
+}
+
+.nycity__btn, .notes__btn {
+	background: url("../../media/img/sprite.png?v1") no-repeat;
+	cursor: pointer;
+	height: 48px;
+	position: absolute;
+	width: 47px;
+	z-index: 1;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+.nycity__btn {
+	background-position: -585px -724px;
+	left: 37px;
+	top: 105px;
+}
+.notes__btn {
+	background-position: -654px -724px;
+	left: 106px;
+	top: 105px;
+}
+
+.phone__notes {
+	background: url("../../media/img/sprite.png?v1") no-repeat -918px -10px;
+	border: 2px inset gray;
+	color: #9c9c9c;
+	display: none;
+	font: 16px Arial;
+	height: 397px;
+	left: 18px;
+	line-height: 20px;
+	padding: 96px 11px 0 11px;
+	position: absolute;
+	top: 80px;
+	width: 254px;
+	z-index: 2;
+}

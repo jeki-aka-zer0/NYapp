@@ -1,0 +1,54 @@
+/**
+ * переменные
+ */
+
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web';
+
+@max-width: 1200px;
+@padding: 15px;
+
+@pink: #f76c6c;
+@pink-light-1: #ff8d8d;
+@pink-light-2: #ffb8b8;
+@pink-dark-1: #d53d3d;
+@pink-dark-2: #b01e1e;
+
+@blue: #3c9191;
+@blue-light-1: #62b1b1;
+@blue-light-2: #99d5d5;
+@blue-light-3: #a2e1e1;
+@blue-dark-1: #258080;
+@blue-dark-2: #126a6a;
+
+@green: #50c250;
+@green-light-1: #78d878;
+@green-light-2: #a8eaa8;
+@green-dark-1: #31aa31;
+@green-dark-2: #188d18;
+
+@yellow: #f2a463;
+@yellow-light-1: #ffc18d;
+@yellow-light-2: #ffd8b8;
+@yellow-dark-1: #d5823d;
+@yellow-dark-2: #b0601e;
+
+.transition-property(@time:100ms, @fn:linear){
+	-webkit-transition: @time @fn;
+	-o-transition: @time @fn;
+	-moz-transition: @time @fn;
+	transition: @time @fn;
+}
+
+.clearAfter(){
+	clear: both;;
+	content: '';
+	display: block;
+}
+
+.tablet(@rules) {
+	@media (max-width: 835px) { @rules(); }
+}
+
+.desktop(@rules) {
+	@media (min-width: 835px) { @rules(); }
+}

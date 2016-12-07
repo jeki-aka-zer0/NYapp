@@ -1,0 +1,76 @@
+/**
+ * head block
+ */
+
+.head {
+	padding: @padding @padding 10px;
+	position: relative;
+}
+
+.logo {
+	left: @padding;
+	position: absolute;
+	text-decoration: none;
+	top: @padding;
+	z-index: 2;
+	.transition-property();
+
+	.tablet({
+		display: none;
+	});
+}
+
+.logo__ny {
+	font: italic bold 75px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	line-height: 45px;
+}
+
+.logo__city {
+	font: 30px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	margin-left: -10px;
+}
+
+.menu {
+	display: block;
+	position: relative;
+	text-align: right;
+	z-index: 1;
+
+	.desktop({
+		padding-left: 120px;
+	});
+
+	&:after {
+		.clearAfter();
+	}
+}
+
+.menu__item {
+	display: inline-block;
+	margin: 0 7px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.menu__item__link {
+	border-radius: 5px;
+	display: inline-block;
+	font: 24px 'Titillium Web', sans-serif;
+	float: right;
+	line-height: 1;
+	padding: 11px @padding 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	.transition-property();
+
+	.tablet({
+		font-size: 14px;
+	});
+}
+
+.menu__item__link-active, .menu__item__link-active:hover {
+	cursor: default;
+}
